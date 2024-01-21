@@ -1,0 +1,39 @@
+// SPDX-License-Identifier: GPL-2.0
+/* Copyright (c) 2022, The Linux Foundation. All rights reserved.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 and
+ * only version 2 as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ */
+
+/* Display */
+&pm8150a_amoled {
+        status = "disabled";
+};
+
+&pm8150a_l11 {
+        qcom,init-voltage = <3000000>;
+        regulator-min-microvolt = <3000000>;
+        regulator-max-microvolt = <3000000>;
+};
+
+/* Camera */
+&L2C {
+        regulator-min-microvolt = <1200000>;
+        regulator-max-microvolt = <1304000>;
+};
+
+&L3C {
+        regulator-min-microvolt = <800000>;
+        regulator-max-microvolt = <1200000>;
+};
+
+&L7C {
+        regulator-min-microvolt = <2704000>;
+        regulator-max-microvolt = <3304000>;
+};

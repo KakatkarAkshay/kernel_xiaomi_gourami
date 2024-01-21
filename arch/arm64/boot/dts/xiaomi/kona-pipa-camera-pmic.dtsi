@@ -1,0 +1,38 @@
+// SPDX-License-Identifier: GPL-2.0
+/* Copyright (c) 2022, The Linux Foundation. All rights reserved.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 and
+ * only version 2 as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ */
+
+&soc {
+    camera_wide_vana_ldo: gpio-regulator@0 {
+        compatible = "regulator-fixed";
+        reg = <0x00 0x00>;
+        regulator-name = "camera_wide_vana_ldo";
+        regulator-min-microvolt = <2800000>;
+        regulator-max-microvolt = <2800000>;
+        regulator-enable-ramp-delay = <135>;
+        enable-active-high;
+        gpio = <&tlmm 31 0>;
+        vin-supply = <&BOB>;
+    };
+
+    camera_front_vana_ldo: gpio-regulator@1 {
+        compatible = "regulator-fixed";
+        reg = <0x01 0x00>;
+        regulator-name = "camera_front_vana_ldo";
+        regulator-min-microvolt = <2800000>;
+        regulator-max-microvolt = <2800000>;
+        regulator-enable-ramp-delay = <135>;
+        enable-active-high;
+        gpio = <&tlmm 84 0>;
+                vin-supply = <&BOB>;
+    };
+};
